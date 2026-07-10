@@ -26,6 +26,40 @@ body{
     flex-direction:column;
 }
 
+/* Minimal Header */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:24px 40px;
+    display:flex;
+    justify-content:center;
+    z-index:100;
+    background:transparent;
+}
+
+nav{
+    display:flex;
+    gap:40px;
+}
+
+nav a{
+    color:#999;
+    text-decoration:none;
+    font-size:.9rem;
+    font-weight:600;
+    letter-spacing:1px;
+    transition:.25s;
+}
+
+nav a:hover{
+    color:#000;
+}
+
+/* Main Content */
+
 main{
     flex:1;
     display:flex;
@@ -53,6 +87,17 @@ h1{
     margin-bottom:45px;
 }
 
+.tagline a{
+    color:#000;
+    text-decoration:none;
+    font-weight:800;
+    transition:.2s;
+}
+
+.tagline a:hover{
+    text-decoration:underline;
+}
+
 .phone{
     font-size:clamp(1.4rem,2.4vw,2.2rem);
     font-weight:700;
@@ -64,6 +109,8 @@ h1{
 .phone:hover{
     opacity:.65;
 }
+
+/* Footer */
 
 footer{
     text-align:center;
@@ -82,21 +129,45 @@ footer a:hover{
     text-decoration:underline;
 }
 
+/* Mobile */
+
 @media (max-width:600px){
+
+    header{
+        padding:18px 20px;
+    }
+
+    nav{
+        gap:20px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:.8rem;
+    }
 
     h1{
         letter-spacing:4px;
     }
 
     .tagline{
-        line-height:1.5;
+        line-height:1.6;
     }
-
 }
 </style>
 
 </head>
 <body>
+
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
 <main>
 
@@ -105,7 +176,10 @@ footer a:hover{
         <h1>R.E.A.L</h1>
 
         <div class="tagline">
-            Reality | Engagement | Acceptance | Life Skills
+            <a href="reality.html">Reality</a> |
+            <a href="engagement.html">Engagement</a> |
+            <a href="acceptance.html">Acceptance</a> |
+            <a href="lifeskills.html">Life Skills</a>
         </div>
 
         <a class="phone" href="tel:6166993760">
